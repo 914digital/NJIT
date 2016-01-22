@@ -1,0 +1,20 @@
+/*
+Theme Name: NJIT
+Theme URI: http://agilepixelstudio.com
+Description: Responsive theme for NJIT Human Resouces Department
+Author: Agile Pixel Studio
+Author URI: http://agilepixelstudio.com
+Version: 1.0
+License: MIT License
+License URI: http://opensource.org/licenses/MIT
+*/
+
+body {
+	
+}
+img {
+	max-width:100%;	
+}
+
+
+/* Bootstrap Styles --------------------------------------------->>>>>>> */
