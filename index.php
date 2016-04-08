@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row row-offcanvas">
     
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-md-8">
       <div id="content" role="main">
         <?php if(have_posts()): while(have_posts()): the_post();?>
         <article role="article" id="post_<?php the_ID()?>">
@@ -35,7 +35,7 @@
       </div><!-- /#content -->
     </div>
     
-    <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
+    <div class="col-md-4" id="sidebar" role="navigation">
        <?php get_template_part('parts/sidebar'); ?>
     </div>
     

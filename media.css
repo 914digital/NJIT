@@ -4,35 +4,177 @@
 .mobileonly {
 	display:none;
 }
+.divide15 {
+	margin:15px 0;
+}
+.divide30 {
+	margin:30px 0;
+}
+.divide60 {
+	margin:60px 0;
+}
 
 /* Media Queries --------------------------------------------->>>>>>> */
 
 /* Large Devices, Wide Screens */
     @media only screen and (max-width : 1200px) {
-
+	.search-form {
+		display:none;
+	}
+	.navbar-brand {
+       padding: 23px 15px;
 }
-
+.video-background {
+	background-color: rgba(255, 255, 255, 0.88);
+    height: 477px;
+}
+}
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 992px) {
-
+	    .hr-logo {
+    padding: 30px 0px 0 10px;
 }
 
+	.nav>li>a {
+	position: relative;
+    display: block;
+    padding: 38px 14px 15px;
+    }
+    .navbar-nav>li:after { 
+	    top: -36px;
+	    }
+    .navbar-nav {
+    float: right;
+    margin: 0;
+}
+#menu-employee-menu li {
+    padding: 25px 12px;
+}
+#menu-employee-menu li:after {
+       left: 13px;
+ }
+#menu-employee-menu li a {
+    font-size: 12px;
+}
+.video-background {
+    height: auto;
+}
+.no-padding-right {
+	padding-right:15px;
+}
+.no-padding-left {
+padding-left:15px;
+}
+.home-careers {
+	min-height:0;
+}
+.home-bg {
+	height:1500px;
+}
+}
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
+	    body {
+		    background-color:#000;
+	    }
 	    .desktoponly {
 		display:none;
 	}
 		.mobileonly {
 		display:block;
 	}
+		.divide15 {
+		margin:0;
+		}
+		.divide30 {
+			margin:0;
+		}
+		.divide60 {
+			margin:0;
+		}
+		.mdivide15 {
+		margin:15px 0;
+		}
+		.mdivide30 {
+			margin:30px 0;
+		}
+		.mdivide60 {
+			margin:60px 0;
+		}
+		.navbar-brand {
+    padding: 26px 42px;
+}
+.navbar {
+       margin-bottom: 0;
+}
+.home-content {
+    padding-top: 0;
+}
+.home-bg {
+    background-image: none;
+    background-size: cover;
+    height: auto;
+    background-color: #000;
+}
+.fp-sub-menu {
+	padding:0;
+}
+.fp-sub-menu a.item {
+	margin:5px 0;
+}
+.fp-mission {
+	margin-top:20px;
+}
+#slide-panel {
+	display:none;
+}
+.footer-right {
+    float: left;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+    margin-top: 120px;
+}
+.navbar-collapse {
+	box-shadow:none;
+}
+.navbar-nav {
+    float: none;
+    margin: 0;
+    text-align: center;
+}
+.nav>li>a {
+	font-size:20px;
+	padding:10px 15px;
+}
+.navbar-nav>li:after {
+    content: "";
 }
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 480px) {
+	.modal-dialog {
+    width: 92%;
+    height: auto;
+    padding: 0;
+}
+.navbar-brand {
+width: 160px;
+}
 
 }
 
     /* Custom, iPhone Retina */ 
     @media only screen and (max-width : 320px) {
-        
+      .hr-logo {
+    padding: 0px 0px 0 10px;
+    margin-top: -23px;
+}
+   .hr-logo img {
+	   width:50%;
+	   }
+	   .navbar-toggle {
+		   top:15px;
+	   }
+
 }

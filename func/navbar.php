@@ -116,3 +116,4 @@ class BootstrapNavMenuWalker extends Walker_Nav_Menu {
 
 register_nav_menu('upper-bar', __('Screen-top menu'));
 register_nav_menu('lower-bar', __('Main menu (below site title)'));
+register_nav_menu('mobile-menu', __('Top Mobile Menu'));
