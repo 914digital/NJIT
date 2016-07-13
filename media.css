@@ -22,19 +22,58 @@
 		display:none;
 	}
 	.navbar-brand {
-       padding: 23px 15px;
+    padding: 26px 42px;
 }
+ .desktoponly {
+		display:none;
+	}
+		.mobileonly {
+		display:block;
+	}
 .video-background {
 	background-color: rgba(255, 255, 255, 0.88);
     height: 477px;
 }
-}
-    /* Medium Devices, Desktops */
-    @media only screen and (max-width : 992px) {
-	    .hr-logo {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin:15px 0;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+                
+    .collapse.in{
+  		display:block !important;
+	}
+	 .hr-logo {
     padding: 30px 0px 0 10px;
 }
 
+
+}
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+	   
 	.nav>li>a {
 	position: relative;
     display: block;
@@ -47,6 +86,7 @@
     float: right;
     margin: 0;
 }
+
 #menu-employee-menu li {
     padding: 25px 12px;
 }
@@ -71,19 +111,11 @@ padding-left:15px;
 .home-bg {
 	height:1500px;
 }
+
 }
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
-	    body {
-		    background-color:#000;
-	    }
-	    .desktoponly {
-		display:none;
-	}
-		.mobileonly {
-		display:block;
-	}
-		.divide15 {
+	  		.divide15 {
 		margin:0;
 		}
 		.divide30 {
@@ -107,9 +139,6 @@ padding-left:15px;
 .navbar {
        margin-bottom: 0;
 }
-.home-content {
-    padding-top: 0;
-}
 .home-bg {
     background-image: none;
     background-size: cover;
@@ -117,16 +146,13 @@ padding-left:15px;
     background-color: #000;
 }
 .fp-sub-menu {
-	padding:0;
+	padding:15px;
 }
 .fp-sub-menu a.item {
 	margin:5px 0;
 }
 .fp-mission {
-	margin-top:20px;
-}
-#slide-panel {
-	display:none;
+	
 }
 .footer-right {
     float: left;
@@ -140,7 +166,7 @@ padding-left:15px;
 }
 .navbar-nav {
     float: none;
-    margin: 0;
+    margin: 15px 0;
     text-align: center;
 }
 .nav>li>a {
@@ -149,6 +175,10 @@ padding-left:15px;
 }
 .navbar-nav>li:after {
     content: "";
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #fff;
+}
 }
 
     /* Extra Small Devices, Phones */ 
@@ -161,9 +191,34 @@ padding-left:15px;
 .navbar-brand {
 width: 160px;
 }
-
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment:inherit;
+  height:200px!important;
 }
-
+.fp-sub-menu a.item {
+	background-color:#fff;
+	color:#000;
+	display:block;
+	padding:2px;
+}
+.fp-mission {
+    background-color: #fff;
+    padding: 15px;
+}
+.home-content {
+    padding: 15px;
+}
+.carousel {
+	padding-top:65px;
+}
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+    position: absolute;
+    top: 65%;
+}
+	}
     /* Custom, iPhone Retina */ 
     @media only screen and (max-width : 320px) {
       .hr-logo {

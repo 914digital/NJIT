@@ -21,10 +21,10 @@
 	 <div class="top-menu">
 	 <div class="container">
 	   <div class="row">
-	 <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php bloginfo('template_directory') ?>/img/njit-logo.png" /></a>  <a class="hr-logo" href="#">
+	 <a class="navbar-brand" href="http://njit.org"><img src="<?php bloginfo('template_directory') ?>/img/njit-logo.png" /></a>  <a class="hr-logo" href="http://hr.njit.edu">
 			      <img src="<?php bloginfo('template_directory') ?>/img/hr-logo.png">
 		      </a>
-		 <div class="top-search">
+		<!-- <div class="top-search">
 		   <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
     <label>
         <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
@@ -47,7 +47,7 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
 	<div class="container">
       <div class="row">
-	     <a class="contact-us">Contact Us</a>
+	     <a href="http://www5.njit.edu/humanresources/contact/" class="contact-us">Contact Us</a>
       
 
 	     	     

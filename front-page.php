@@ -1,5 +1,5 @@
 <?php get_template_part('parts/header'); ?>
- <div id="slide-panel">
+ <div id="slide-panel" class="hidden-xs hidden-sm">
     <a href="#" class="btn" id="opener">Events <i class="fa fa-angle-up"></i></a>
     <div class="panel-content"><h1><?php echo CFS()->get('event_title'); ?></h1>
     <p><?php echo CFS()->get('event_text'); ?></p>
@@ -7,55 +7,35 @@
     </div>
  </div>
 
-<div id="slide-panel-forms">
+<div id="slide-panel-forms" class="hidden-xs hidden-sm">
     <a href="#" class="btn" id="opener-forms">Forms <i class="fa fa-angle-up"></i></a>
     <div class="panel-content-forms"><h1>Forms</h1>
     <p><ul>
-	    <li><a href="#"><i class="fa fa-file-pdf-o"></i> Form 1</a><br />
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-	    </li>
-	    <li><a href="#"><i class="fa fa-file-pdf-o"></i> Form 2</a>
-	    <br />
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-	    </li>
-	    <li><a href="#"><i class="fa fa-file-pdf-o"></i> Form 3</a>
-	    <br />
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+	    <li><a href="<?php echo CFS()->get('form_link_1'); ?>"><i class="fa fa-file-pdf-o"></i> <?php echo CFS()->get('form_title_1'); ?></a></li>
+	     <li><a href="<?php echo CFS()->get('form_link_2'); ?>"><i class="fa fa-file-pdf-o"></i> <?php echo CFS()->get('form_title_2'); ?></a></li>
+	      <li><a href="<?php echo CFS()->get('form_link_3'); ?>"><i class="fa fa-file-pdf-o"></i> <?php echo CFS()->get('form_title_3'); ?></a></li>
     </ul></p>
-    <a class="btn" href="<?php echo CFS()->get('event_link'); ?>">All Forms</a>
+    <a class="btn" href="http://www5.njit.edu/humanresources/services/forms/">All Forms</a>
     </div>
  </div>
-
-
+ 
+ 
 
 <div id="mycarousel" class="carousel slide carousel-fade" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#mycarousel" data-slide-to="1"></li>
-    <li data-target="#mycarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item">
-        <img src="<?php bloginfo('template_directory') ?>/img/slide1.jpg" alt="First Image">
-        <div class="carousel-caption">
-        </div>
-    </div>
-    <div class="item">
-        <img src="<?php bloginfo('template_directory') ?>/img/slide2.jpg" alt="Second Image">
-        <div class="carousel-caption">
-            
-        </div>
-    </div>
-    <div class="item">
-        <img src="<?php bloginfo('template_directory') ?>/img/slide3.jpg" alt="Third Image">
-        <div class="carousel-caption">
-        </div>
-    </div>
-
-     </div>
+	
+	  <a data-scroll class="view-video-btn hidden-xs hidden-sm" href="#view-video">Learn More <i class="fa fa-angle-down" aria-hidden="true"></i>
+	</a>
+  
+	  <!-- Wrapper for slides -->
+  				<div class="carousel-inner" role="listbox">
+	     			<?php $fields = CFS()->get('slider');
+	                       foreach ($fields as $field) { ?>
+	                       <?php echo '<div class="item">' ?>
+						   		<?php echo '<img src="'.$field['slide'].'" />' ?>
+						   			<?php echo '</div>' ?>
+	                       <?php   }  ?>
+     					
+</div>
 
   <!-- Controls -->
   <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
@@ -73,17 +53,17 @@
   <div class="row">
 	  
  <div class="col-md-4">
-	 <a class="item" href="#">
+	 <a class="item" href="http://www5.njit.edu/humanresources/benefits/">
 		 <h2>Benefits</h2>
 	 </a>
  </div><!-- /col-md-4 -->
 <div class="col-md-4">
-	 <a class="item" href="#">
+	 <a class="item" href="http://www5.njit.edu/humanresources/services/">
 		 <h2>HR Services</h2>
 	 </a>
 </div><!-- /col-md-4 -->
 <div class="col-md-4">
-	 <a class="item" href="#">
+	 <a class="item" href="http://www5.njit.edu/humanresources/supervisors/">
 		 <h2>Supervisor's Toolkit</h2>
 	 </a>
 </div><!-- /col-md-4 -->
@@ -96,7 +76,7 @@
 
 
 
-
+<span id="view-video"></span>
 	<div class="home-content">
 		
 				<div class="container">
@@ -106,6 +86,7 @@
 	<a href="#" data-toggle="modal" data-target="#myModal" id="play-video">
 		 <img style="width:100%" src="<?php bloginfo('template_directory') ?>/img/home-video.png" />
 	</a><!-- /home-video -->
+	
 		 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -115,9 +96,9 @@
       </div>
 
         <div class="modal-body">
-       <video id="video">
-	<source src="<?php bloginfo('template_directory') ?>/video/hr-video.mp4" type="video/mp4">
-	<source src="<?php bloginfo('template_directory') ?>/video/home-video.webm" type="video/webm">
+       <video id="video" controls>
+	<source src="<?php bloginfo('template_directory') ?>/video/njit-eco.mp4" type="video/mp4">
+	<source src="<?php bloginfo('template_directory') ?>/video/njit-eco.webm" type="video/webm">
 </video>
 	      
 
@@ -132,70 +113,28 @@
 					</div><!-- /video-background -->
 			</div><!-- /col-md-12 -->
 							
-							<div class="mobileonly">
-							<div class="col-md-4 col-sm-12">
-								<div class="home-careers">
-									<h1>CAREER OPPORTUNITIES</h1>
-									<a class="career-single" href="<?php echo CFS()->get('career_link_one'); ?>">
-										<h2><?php echo CFS()->get('career_title_one'); ?></h2>
-										<p><?php echo CFS()->get('career_des_one'); ?></p>
-									</a><!-- /career-single -->
-									
-									<a class="career-single" href="<?php echo CFS()->get('career_link_two'); ?>">
-										<h2><?php echo CFS()->get('career_title_two'); ?></h2>
-										<p><?php echo CFS()->get('career_des_two'); ?></p>
-									</a><!-- /career-single -->
-									
-									<a class="career-single" href="<?php echo CFS()->get('career_link_three'); ?>">
-										<h2><?php echo CFS()->get('career_title_three'); ?></h2>
-										<p><?php echo CFS()->get('career_des_three'); ?></p>
-									</a><!-- /career-single -->
-									
-									<a class="btn" href="#">View All</a>
-									
-								</div><!-- /home-careers -->
-	
-				</div><!-- /col-md-4 -->
-							</div><!-- /mobileonly -->
+							
 
 		</div><!-- /row -->
 	</div><!-- /container -->
 </div><!-- /home-content -->
 
 
-<div class="mobileonly">
-<div class="fp-forms">
+
+<div class="fp-forms hidden-md hidden-lg">
 <div class="container">
 	
-  <div class="row">
-	  <div class="col-md-12"><h1>REQUESTED FORMS</h1>
-	  </div>
-	  
-  </div><!-- /row -->
-  <div class="row">
-<?php
-$fields = CFS()->get('fp_forms');
-  foreach ($fields as $field) { ?>
-    <?php echo '<div class="col-md-4">
-	    <h3><a href="'.$field['fp_form_link'].'">
-	        '.$field['fp_form_title'].'	<br />
-	        <i class="fa fa-file-pdf-o"></i>  
-	        </a></h3>
-	        <p>'.$field['form_description'].'</p>     
-	       <p><a href="'.$field['fp_form_link'].'">Download <i class="fa fa-angle-down"></i></a></p>
-	       </div>'  ?>               
-			<?php   }  ?>
-
-</div><!-- /row -->
+  
+	
 	
   <div class="row">
 	  <div class="col-md-12">
-<a href="#" class="btn">View All Forms</a>
+<a href="http://www5.njit.edu/humanresources/services/forms/" class="btn">View All Forms</a>
 </div>
   </div>
 </div><!-- /container -->
  </div><!-- /fp-forms -->
-</div><!-- /mobileonly -->
+
 
 <div class="fp-mission">
 <div class="container">

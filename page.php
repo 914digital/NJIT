@@ -1,5 +1,5 @@
 <?php get_template_part('parts/header'); ?>
-
+<div class="page-content">
 <div class="container">
   <div class="row">
 
@@ -21,5 +21,6 @@
     
   </div><!-- /.row -->
 </div><!-- /.container -->
+</div><!-- /page-content -->
 
 <?php get_template_part('parts/footer'); ?>

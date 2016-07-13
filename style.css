@@ -11,8 +11,17 @@ License URI: http://opensource.org/licenses/MIT
 
 body {
 	font-family: 'Lato', sans-serif;
-	overflow-x:hidden;
+	
 }
+a {
+    color: #BA2229;
+    transition:all .5s ease-out;
+}
+a:hover, a:focus {
+    color: #A31D24;
+    text-decoration: underline;
+}
+
 img {
 	max-width:100%;	
 }
@@ -38,7 +47,7 @@ video {
 	top:0;
 	right:0;
 	left:0;
-	z-index:9999999;
+	z-index:9999;
 }
 .top-search {
 	float:right;
@@ -75,12 +84,10 @@ ul#menu-header-menu {
     transition: all .3s ease-out;
     font-weight: 300;
 }
-}
 #menu-header-menu li a:hover {
 	text-decoration:none;
 	color:#ccc;
 }
-
 .lower-bar {
 	background-color: #a31d24;
     padding: 0 10px;
@@ -106,6 +113,16 @@ ul#menu-employee-menu {
 	text-decoration:none;
 	color:#ccc;
 }
+#menu-employee-menu ul.dropdown-menu {
+	top: 25px;
+}
+#menu-employee-menu .dropdown-menu li {
+	float:none;
+}
+#menu-employee-menu ul.dropdown-menu li a {
+	color:#000;
+}
+
 a.contact-us {
 	float: right;
     padding: 14px 30px;
@@ -116,9 +133,9 @@ a.contact-us {
     font-size: 16px;
     transition:all .3s ease-out;
 }
-a.contact-btn:hover, a.contact-btn:focus, a.contact-btn:active {
+a.contact-us:hover, a.contact-us:focus, a.contact-us:active {
 	text-decoration:none;
-	background-color: #710005;
+	background-color: #eee;
 }
 .home-content {
 	padding: 30px 0;
@@ -299,7 +316,7 @@ a.career-single p {
 	font-size:23px;
 }
 .fp-forms {
-	padding:60px 0;
+	padding:15px;
 	background-color: rgba(234, 234, 234, 0.88);
 	text-align: center;
 }
@@ -330,8 +347,8 @@ a.career-single p {
     text-align: center;
     transition: all .3s ease-out;
     font-weight: 300;
-    margin-top: 30px;
-    font-size: 17px;}
+    font-size: 17px;
+}
 .fp-forms .btn:hover, .fp-forms .btn:active, .fp-forms .btn:focus {
 	background-color:#710005;
 }
@@ -360,6 +377,29 @@ a.career-single p {
     background-color: transparent;
     border: transparent;
     color:#a31d24;
+}
+a.view-video-btn {
+	color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    background-color: #000;
+    padding: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    text-align: center;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    width: 166px;
+    border-right:1px solid rgb(163, 29, 36);
+    border-left:1px solid rgb(163, 29, 36);
+    border-top:1px solid rgb(163, 29, 36);
+}
+a.view-video-btn:hover, a.view-video-btn:active, a.view-video-btn:focus {
+	text-decoration:none;
 }
 .footer-top {
 	background-color:#363636;
@@ -412,6 +452,153 @@ a.career-single p {
 .social-bot {
 	font-size:20px;
 }
+.page-content {
+	padding:160px 0;
+}
+#content {
+	
+}
+#content h1 {
+	margin: 10px 0;
+    font-weight: 300;
+    background-color: #FFF;
+    color: #A31D24;
+}
+#content h2 {
+	margin: 10px 0;
+    font-weight: 300;
+    color: #fff;
+    background-color: #A31D24;
+    padding: 10px;
+}
+#contact-top {
+	font-weight:300;
+	font-size:20px;
+	background-color: #F7F7F7;
+    padding: 10px;
+}
+.hr-staff {
+	margin:30px 0;
+}
+.staff-member {
+	padding: 15px 0 30px;
+	border-bottom:1px solid #ccc;
+	margin-bottom:30px;
+}
+.staff-member h3 {
+	margin-top:0;
+	font-weight:300;
+}
+.staff-member h4 {
+	margin-top:0;
+	font-weight:300;
+}
+.staff-member h5 {
+	color:#A31D24;
+	margin-bottom: 0;
+    font-size: 17px;
+}
+.staff-member p {
+	font-weight:300;
+	font-size: 16px;
+    line-height: 23px;
+}
+#sidebar {
+	margin-top:68px;
+}
+.sidebar-forms {
+	background-color:#eee;
+	padding:10px;
+	margin-bottom: 15px;
+}
+.sidebar-forms h1 {
+	margin-top: 0;
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #A31D24;
+    font-weight:300;
+}
+.sidebar-forms h2 {
+	 font-size:22px;
+}
+.sidebar-forms ul {
+	padding-left:0;
+}
+.sidebar-forms li {
+	list-style:none;
+	font-size:20px;
+	font-weight:300;
+	margin-bottom:15px;
+}
+.sidebar-forms .btn {
+	border: 2px solid;
+    border-radius: 0;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.benefits {
+	padding-top:30px;
+}
+.benefits a {
+	
+}
+.benefits a:hover {
+	text-decoration:none;
+}
+#box {  
+  	background-size:cover;
+  	overflow:hidden;
+  	display: block;
+    height: 200px;
+    position: relative;
+}
+#overlay {  
+	background:rgba(0,0,0,.75);
+    padding: 66px 0;
+    opacity:0;
+    -webkit-transition: opacity .25s ease;
+	-moz-transition: opacity .25s ease;
+	position: relative;
+	text-align:center;
+}
+#box:hover  #overlay {
+     opacity:1;
+}
+#box:active #overlay {
+	 opacity:1;
+}
+#box:focus #overlay {
+     opacity:1;
+}
+#plus {  
+     font-weight:900;
+     color:rgba(255,255,255,.85);
+     font-size:120px;
+     text-decoration:none;
+}
+#content .benefits h2 {
+	margin:0;
+	position: absolute;
+	bottom:0;
+	width: 100%;
+    min-height: 68px;
+    background-color: rgba(0,0,0,.75);
+    font-size: 21px;
+}
+.spacer {
+	display:inline-block;
+	margin:0 5px;
+}
+.staff-title {
+	font-size:18px;
+}
+.tab-content {
+	border:1px solid #ccc;
+	padding:10px;
+	font-size:17px;
+	font-weight:300;
+}
 
 
 
@@ -434,11 +621,13 @@ a.career-single p {
     height: 30px;
 }
 .mobileonly .navbar {
-	position: relative;
+	position: fixed;
     min-height: 50px;
     margin-bottom: 0px;
     border: 0;
     height: auto;
+    left:0;
+    right:0;
 }
 .navbar-default {
     background-color: #a31d24;
@@ -603,6 +792,10 @@ a.career-single p {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment:fixed;
+}
+.carousel {
+    position: relative;
+    height: 100%;
 }
 .carousel-fade .carousel-inner .item {
   -webkit-transition-property: opacity;
